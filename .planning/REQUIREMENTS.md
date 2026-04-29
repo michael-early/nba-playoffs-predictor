@@ -54,21 +54,19 @@
 
 ## Traceability
 
-*(Filled by roadmapper)*
-
 | REQ-ID | Phase |
 |--------|-------|
-| INFRA-01 | — |
-| INFRA-02 | — |
-| NFL-01 | — |
-| NFL-02 | — |
-| NFL-03 | — |
-| NFL-04 | — |
-| NFL-05 | — |
-| NFL-06 | — |
-| NFL-07 | — |
-| NFL-08 | — |
-| NFL-09 | — |
-| NFL-10 | — |
-| SCAF-01 | — |
-| SCAF-02 | — |
+| INFRA-01 | Phase 1 |
+| INFRA-02 | Phase 1 |
+| NFL-01 | Phase 2 |
+| NFL-02 | Phase 2 |
+| NFL-03 | Phase 3 |
+| NFL-04 | Phase 3 |
+| NFL-05 | Phase 4 |
+| NFL-06 | Phase 4 |
+| NFL-07 | Phase 4 |
+| NFL-08 | Phase 3 |
+| NFL-09 | Phase 3 |
+| NFL-10 | Phase 2 |
+| SCAF-01 | Phase 4 |
+| SCAF-02 | Phase 4 |
