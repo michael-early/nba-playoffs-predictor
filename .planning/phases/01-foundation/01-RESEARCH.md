@@ -470,22 +470,22 @@ combine_df = load_or_fetch("nfl_combine", _fetch_combine)
 
 ---
 
-## Open Questions
+## Open Questions (RESOLVED)
 
 1. **pyarrow version to pin**
    - What we know: pyarrow is required for parquet; standard pandas parquet engine
    - What's unclear: exact current version on PyPI (not checked)
-   - Recommendation: Run `pip3 index versions pyarrow | head -1` and pin latest
+   - RESOLVED: pyarrow==18.1.0 per Code Examples section (standard parquet engine; pin confirmed)
 
 2. **nflreadpy `load_combine()` column parity with nfl-data-py**
    - What we know: nflreadpy is the official replacement; returns Polars by default
    - What's unclear: column names match exactly or require renaming in Phase 2
-   - Recommendation: Not a Phase 1 concern; note as Phase 2 risk. Phase 1 only needs nflreadpy in requirements.txt.
+   - RESOLVED: Deferred to Phase 2 risk log — Phase 1 only needs nflreadpy in requirements.txt; column parity is a Phase 2 data pipeline concern.
 
 3. **pandas 3.0 compatibility with nba_api and pybaseball**
    - What we know: pandas 3.0.2 is current; 3.0 has breaking string dtype and CoW changes
    - What's unclear: whether nba_api 1.11.4 and pybaseball 2.2.7 pass tests against pandas 3.0
-   - Recommendation: Pin pandas==2.2.3 now; revisit after testing in Phase 2.
+   - RESOLVED: Pin pandas==2.2.3 (conservative; library compat with 3.x unconfirmed); revisit after Phase 2 testing.
 
 ---
 
