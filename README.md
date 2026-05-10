@@ -6,7 +6,25 @@ Predicts which team wins each NBA playoff series using pre-series regular season
 
 ---
 
-## Results
+## 2025–26 Playoff Predictions
+
+Current-season metrics sourced from Basketball Reference. Model applied to live second-round matchups.
+
+### Bracket Projection
+
+![Bracket](nba-playoffs/bracket_2025-26.png)
+
+### Championship Probability
+
+Computed by simulating all possible opponent paths through the bracket — not just the single most-likely path.
+
+![Championship probability](nba-playoffs/championship_prob_2025-26.png)
+
+---
+
+## Model Performance
+
+![Model performance](nba-playoffs/model_performance.png)
 
 **Best model:** XGBoost — **AUC 0.683** on held-out 2022–24 seasons  
 **Naive baseline:** 56.7% (always pick the higher seed)
@@ -70,6 +88,8 @@ Run in order — each depends on the previous output:
 | 03b | `03b-series-feature-engineering.ipynb` | Aggregate games → series, build feature matrix |
 | 04b | `04b-series-modeling.ipynb` | Train LR / RF / XGBoost, compare on holdout |
 | 05b | `05b-series-explainability.ipynb` | SHAP analysis on best model |
+| 06 | `06-predict-current-playoffs.ipynb` | Apply model to 2025–26 bracket; fetch live metrics from Basketball Reference |
+| 07 | `07-visuals.ipynb` | Bracket diagram, championship probability, model performance card |
 
 ---
 
