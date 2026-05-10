@@ -1,0 +1,28 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data — never commit raw or processed data
+nba-playoffs/data/raw/
+nba-playoffs/data/processed/
+nfl/data/
+nba/data/
+mlb/data/
+
+# Model artifacts
+nba-playoffs/models/*.joblib
+
+# macOS
+.DS_Store
+
+# Secrets
+.env
+*.env
