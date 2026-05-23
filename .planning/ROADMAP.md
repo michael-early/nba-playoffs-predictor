@@ -28,7 +28,7 @@ Decimal phases appear between their surrounding integers in numeric order.
   2. Pre-commit hooks (ruff + nbstripout) run on `git commit` without manual setup
   3. `shared/cache.py` load-or-fetch utility returns cached parquet on second call without hitting any remote API
 **Plans:** 2 plans
-- [ ] 01-01-PLAN.md — Repo scaffold: requirements, pyproject, pre-commit config, sport package skeletons
+- [x] 01-01-PLAN.md — Repo scaffold: requirements, pyproject, pre-commit config, sport package skeletons
 - [ ] 01-02-PLAN.md — shared/cache.py load_or_fetch utility (TDD)
 
 ### Phase 2: NFL Data Pipeline
