@@ -1,31 +1,27 @@
 # Python
 .venv/
 __pycache__/
-*.py[cod]
-*.egg-info/
-.eggs/
-dist/
-build/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Cache
+.cache/
 
 # Jupyter
 .ipynb_checkpoints/
+*.ipynb_checkpoints
 
-# Data — never commit raw or processed data
-nba-playoffs/data/raw/
-nba-playoffs/data/processed/
-nfl-prospect/data/
-nfl/data/
-nba/data/
-mlb/data/
-
-# Model artifacts
-nba-playoffs/models/*.joblib
-!nba-playoffs/models/series_xgboost_context.joblib
-nba-playoffs/outputs/
-
-# macOS
-.DS_Store
-
-# Secrets
+# Environment
 .env
-*.env
+.env.*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build / dist
+*.egg-info/
+dist/
+build/
