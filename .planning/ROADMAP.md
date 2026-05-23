@@ -29,7 +29,7 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. `shared/cache.py` load-or-fetch utility returns cached parquet on second call without hitting any remote API
 **Plans:** 2 plans
 - [x] 01-01-PLAN.md — Repo scaffold: requirements, pyproject, pre-commit config, sport package skeletons
-- [ ] 01-02-PLAN.md — shared/cache.py load_or_fetch utility (TDD)
+- [x] 01-02-PLAN.md — shared/cache.py load_or_fetch utility (TDD)
 
 ### Phase 2: NFL Data Pipeline
 **Goal**: Users have a clean, documented dataset ready for analysis with sample edge cases handled
