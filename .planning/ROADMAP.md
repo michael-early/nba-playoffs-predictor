@@ -39,7 +39,9 @@ Decimal phases appear between their surrounding integers in numeric order.
   1. User can run the data pipeline script and get a joined parquet of combine measurables + career stats with sample membership (drafted / undrafted / not-invited) documented in a README or notebook cell
   2. User can open the EDA notebook, run top-to-bottom, and see distributions, opt-out rates, missingness audit, and position breakdowns without errors
   3. User can see an opt-out bias analysis comparing career outcomes of combine drill skippers vs. participants
-**Plans**: TBD
+**Plans:** 2 plans
+- [ ] 02-01-PLAN.md — nfl/pipeline.py: nflreadpy fetch + Polars join + load_or_fetch cache write + tests
+- [ ] 02-02-PLAN.md — nfl/nfl_eda.ipynb: distributions, missingness audit, opt-out rates, opt-out bias (NFL-02, NFL-10)
 
 ### Phase 3: NFL Statistical Analysis
 **Goal**: Users can see interpretable statistical relationships between combine drills and career outcomes, with confounders controlled
@@ -71,6 +73,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 0/TBD | Not started | - |
-| 2. NFL Data Pipeline | 0/TBD | Not started | - |
+| 2. NFL Data Pipeline | 0/2 | Planning | - |
 | 3. NFL Statistical Analysis | 0/TBD | Not started | - |
 | 4. NFL Advanced Models + Stubs | 0/TBD | Not started | - |
