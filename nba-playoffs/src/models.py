@@ -136,6 +136,25 @@ def build_xgboost_pipeline() -> Pipeline:
     ])
 
 
+def build_regularized_xgboost_pipeline() -> Pipeline:
+    """Return a smaller XGBoost pipeline for wider, derived feature sets."""
+    from xgboost import XGBClassifier  # noqa: PLC0415
+
+    return Pipeline([
+        ("scaler", StandardScaler()),
+        ("clf", XGBClassifier(
+            n_estimators=60,
+            max_depth=2,
+            learning_rate=0.03,
+            subsample=0.8,
+            colsample_bytree=0.8,
+            reg_lambda=5,
+            random_state=42,
+            eval_metric="logloss",
+        )),
+    ])
+
+
 def compare_models(results: dict[str, dict]) -> pd.DataFrame:
     """Format a dict of {model_name: metrics_dict} into a sorted comparison DataFrame.
 

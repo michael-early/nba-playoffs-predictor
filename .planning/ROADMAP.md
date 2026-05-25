@@ -40,7 +40,7 @@ Decimal phases appear between their surrounding integers in numeric order.
   2. User can open the EDA notebook, run top-to-bottom, and see distributions, opt-out rates, missingness audit, and position breakdowns without errors
   3. User can see an opt-out bias analysis comparing career outcomes of combine drill skippers vs. participants
 **Plans:** 2 plans
-- [ ] 02-01-PLAN.md — nfl/pipeline.py: nflreadpy fetch + Polars join + load_or_fetch cache write + tests
+- [x] 02-01-PLAN.md — nfl/pipeline.py: nflreadpy fetch + Polars join + load_or_fetch cache write + tests
 - [ ] 02-02-PLAN.md — nfl/nfl_eda.ipynb: distributions, missingness audit, opt-out rates, opt-out bias (NFL-02, NFL-10)
 
 ### Phase 3: NFL Statistical Analysis

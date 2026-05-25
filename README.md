@@ -108,17 +108,62 @@ Data collection (~5–10 min first run, cached after):
 # Open and run notebooks in order starting with 01-data-collection.ipynb
 ```
 
+## Round-by-Round Playoff Predictions
+
+Use the JSON state file to run predictions before each playoff stage and record actual winners after the round ends:
+
+```bash
+cd Sports/nba-playoffs
+../.venv/bin/python scripts/retrain_series_xgboost.py
+../.venv/bin/python scripts/backtest_series_models.py
+../.venv/bin/python scripts/predict_playoffs.py --stage second_round
+../.venv/bin/python scripts/predict_playoffs.py --stage all
+../.venv/bin/python scripts/predict_playoffs.py --stage second_round --plot
+../.venv/bin/python scripts/predict_playoffs.py --record-result second_round east_top 1610612752
+```
+
+`retrain_series_xgboost.py` trains the default context model, `series_xgboost_context.joblib`, from `data/processed/series_features.parquet`. The default state file is `config/playoffs_2025-26.json`. Update that file before each round with the known matchups, keeping the better regular-season team as `higher_seed`. After a round concludes, set each matchup's `winner_team_id` directly or use `--record-result`. Later stages with `source_slots` resolve from actual winners when present, otherwise from projected winners.
+
+Use `backtest_series_models.py` before changing model defaults. It runs rolling-season tests and compares baseline XGBoost against context variants using accuracy, ROC-AUC, log loss, and Brier score.
+
+Use `context_adjustments` in the same JSON file for information the trained model does not know, such as late-season form, roster availability, or matchup concerns:
+
+```json
+"context_adjustments": {
+  "probability_shrinkage": 0.10,
+  "team_adjustments": {
+    "1610612747": {
+      "net_rtg_delta": 2.0,
+      "ortg_delta": 1.5
+    }
+  },
+  "matchup_adjustments": {
+    "second_round:west_top": {
+      "prob_delta": -0.04,
+      "reason": "Lakers health/rotation context"
+    }
+  }
+}
+```
+
+Positive team deltas improve that team's model inputs; `prob_delta` is relative to the higher seed in that matchup, so negative values favor the lower seed. Keep these entries prospective, not retrofitted after a result is known.
+
+Prediction CSVs are written to `outputs/predictions/`, which is gitignored. Add `--plot` to also write a PNG chart.
+
 ---
 
 ## Project Structure
 
 ```
 nba-playoffs/
+├── config/             ← playoff state files for round-by-round runs
+├── scripts/            ← CLI entry points such as predict_playoffs.py
 ├── notebooks/          ← 5 notebooks, run in order
 ├── src/
 │   ├── data.py         ← nba_api fetch helpers with parquet caching
 │   ├── features.py     ← feature engineering functions
-│   └── models.py       ← pipeline builders, eval, SHAP helpers
+│   ├── models.py       ← pipeline builders, eval, SHAP helpers
+│   └── playoff_predictions.py ← reusable round prediction logic
 ├── data/
 │   ├── raw/            ← gitignored — nba_api parquet cache
 │   └── processed/      ← gitignored — feature matrices

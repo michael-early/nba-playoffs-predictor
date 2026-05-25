@@ -21,6 +21,9 @@ __pycache__/
 .DS_Store
 Thumbs.db
 
+# Claude Code local settings
+.claude/
+
 # Build / dist
 *.egg-info/
 dist/

@@ -1,0 +1,9 @@
+stage,slot,conference,matchup,higher_seed,lower_seed,model_prob_higher_seed,prob_higher_seed,predicted_winner,confidence,actual_winner,adjustment_notes
+first_round,east_1_8,East,Detroit Pistons vs Orlando Magic,Detroit Pistons,Orlando Magic,0.892633855342865,0.8533704698085784,Detroit Pistons,0.8533704698085784,Detroit Pistons,shrinkage=0.10
+first_round,east_2_7,East,Boston Celtics vs Philadelphia 76ers,Boston Celtics,Philadelphia 76ers,0.890134871006012,0.8511213839054108,Boston Celtics,0.8511213839054108,Philadelphia 76ers,shrinkage=0.10
+first_round,east_3_6,East,New York Knicks vs Atlanta Hawks,New York Knicks,Atlanta Hawks,0.8818828463554382,0.8436945617198944,New York Knicks,0.8436945617198944,New York Knicks,shrinkage=0.10
+first_round,east_4_5,East,Cleveland Cavaliers vs Toronto Raptors,Cleveland Cavaliers,Toronto Raptors,0.8577198386192322,0.8219478547573089,Cleveland Cavaliers,0.8219478547573089,Cleveland Cavaliers,shrinkage=0.10
+first_round,west_1_8,West,Oklahoma City Thunder vs Phoenix Suns,Oklahoma City Thunder,Phoenix Suns,0.8846399188041687,0.8461759269237519,Oklahoma City Thunder,0.8461759269237519,Oklahoma City Thunder,shrinkage=0.10
+first_round,west_2_7,West,San Antonio Spurs vs Portland Trail Blazers,San Antonio Spurs,Portland Trail Blazers,0.8842429518699646,0.8458186566829682,San Antonio Spurs,0.8458186566829682,San Antonio Spurs,shrinkage=0.10
+first_round,west_3_6,West,Denver Nuggets vs Minnesota Timberwolves,Denver Nuggets,Minnesota Timberwolves,0.8718566298484802,0.8346709668636323,Denver Nuggets,0.8346709668636323,Minnesota Timberwolves,shrinkage=0.10
+first_round,west_4_5,West,Los Angeles Lakers vs Houston Rockets,Los Angeles Lakers,Houston Rockets,0.6001579165458679,0.5901421248912812,Los Angeles Lakers,0.5901421248912812,Los Angeles Lakers,shrinkage=0.10

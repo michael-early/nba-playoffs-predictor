@@ -1,0 +1,3 @@
+stage,slot,conference,matchup,higher_seed,lower_seed,model_prob_higher_seed,prob_higher_seed,predicted_winner,confidence,actual_winner,adjustment_notes
+conference_finals,east,East,New York Knicks vs Cleveland Cavaliers,New York Knicks,Cleveland Cavaliers,0.6809197664260864,0.6628277897834778,New York Knicks,0.6628277897834778,,shrinkage=0.10
+conference_finals,west,West,Oklahoma City Thunder vs San Antonio Spurs,Oklahoma City Thunder,San Antonio Spurs,0.6902785897254944,0.671250730752945,Oklahoma City Thunder,0.671250730752945,,shrinkage=0.10

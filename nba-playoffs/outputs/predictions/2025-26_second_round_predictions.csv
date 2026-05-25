@@ -1,0 +1,5 @@
+stage,slot,conference,matchup,higher_seed,lower_seed,model_prob_higher_seed,prob_higher_seed,predicted_winner,confidence,actual_winner,adjustment_notes
+second_round,east_top,East,New York Knicks vs Philadelphia 76ers,New York Knicks,Philadelphia 76ers,0.8937985897064209,0.8544187307357789,New York Knicks,0.8544187307357789,,shrinkage=0.10
+second_round,east_bottom,East,Detroit Pistons vs Cleveland Cavaliers,Detroit Pistons,Cleveland Cavaliers,0.7965645790100098,0.7669081211090087,Detroit Pistons,0.7669081211090087,,shrinkage=0.10
+second_round,west_top,West,Oklahoma City Thunder vs Los Angeles Lakers,Oklahoma City Thunder,Los Angeles Lakers,0.765854001045227,0.7392686009407043,Oklahoma City Thunder,0.7392686009407043,,shrinkage=0.10
+second_round,west_bottom,West,San Antonio Spurs vs Minnesota Timberwolves,San Antonio Spurs,Minnesota Timberwolves,0.8781812787055969,0.8403631508350373,San Antonio Spurs,0.8403631508350373,,shrinkage=0.10

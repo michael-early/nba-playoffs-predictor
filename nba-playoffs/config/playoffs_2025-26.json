@@ -1,0 +1,253 @@
+{
+  "season": "2025-26",
+  "metrics_season": "2025-26",
+  "model_name": "series_xgboost_context",
+  "historical_seasons": [
+    "2021-22",
+    "2022-23",
+    "2023-24"
+  ],
+  "stage_order": [
+    "first_round",
+    "second_round",
+    "conference_finals",
+    "finals"
+  ],
+  "notes": "Before each round, fill that stage's matchups if they are known. After the round, set winner_team_id for each completed slot. Later rounds can be derived from source_slots.",
+  "context_adjustments": {
+    "probability_shrinkage": 0.1,
+    "team_adjustments": {},
+    "matchup_adjustments": {}
+  },
+  "stages": {
+    "first_round": {
+      "label": "First Round",
+      "matchups": [
+        {
+          "slot": "east_1_8",
+          "conference": "East",
+          "higher_seed": {
+            "name": "Detroit Pistons",
+            "team_id": 1610612765
+          },
+          "lower_seed": {
+            "name": "Orlando Magic",
+            "team_id": 1610612753
+          },
+          "winner_team_id": 1610612765
+        },
+        {
+          "slot": "east_2_7",
+          "conference": "East",
+          "higher_seed": {
+            "name": "Boston Celtics",
+            "team_id": 1610612738
+          },
+          "lower_seed": {
+            "name": "Philadelphia 76ers",
+            "team_id": 1610612755
+          },
+          "winner_team_id": 1610612755
+        },
+        {
+          "slot": "east_3_6",
+          "conference": "East",
+          "higher_seed": {
+            "name": "New York Knicks",
+            "team_id": 1610612752
+          },
+          "lower_seed": {
+            "name": "Atlanta Hawks",
+            "team_id": 1610612737
+          },
+          "winner_team_id": 1610612752
+        },
+        {
+          "slot": "east_4_5",
+          "conference": "East",
+          "higher_seed": {
+            "name": "Cleveland Cavaliers",
+            "team_id": 1610612739
+          },
+          "lower_seed": {
+            "name": "Toronto Raptors",
+            "team_id": 1610612761
+          },
+          "winner_team_id": 1610612739
+        },
+        {
+          "slot": "west_1_8",
+          "conference": "West",
+          "higher_seed": {
+            "name": "Oklahoma City Thunder",
+            "team_id": 1610612760
+          },
+          "lower_seed": {
+            "name": "Phoenix Suns",
+            "team_id": 1610612756
+          },
+          "winner_team_id": 1610612760
+        },
+        {
+          "slot": "west_2_7",
+          "conference": "West",
+          "higher_seed": {
+            "name": "San Antonio Spurs",
+            "team_id": 1610612759
+          },
+          "lower_seed": {
+            "name": "Portland Trail Blazers",
+            "team_id": 1610612757
+          },
+          "winner_team_id": 1610612759
+        },
+        {
+          "slot": "west_3_6",
+          "conference": "West",
+          "higher_seed": {
+            "name": "Denver Nuggets",
+            "team_id": 1610612743
+          },
+          "lower_seed": {
+            "name": "Minnesota Timberwolves",
+            "team_id": 1610612750
+          },
+          "winner_team_id": 1610612750
+        },
+        {
+          "slot": "west_4_5",
+          "conference": "West",
+          "higher_seed": {
+            "name": "Los Angeles Lakers",
+            "team_id": 1610612747
+          },
+          "lower_seed": {
+            "name": "Houston Rockets",
+            "team_id": 1610612745
+          },
+          "winner_team_id": 1610612747
+        }
+      ]
+    },
+    "second_round": {
+      "label": "Second Round",
+      "matchups": [
+        {
+          "slot": "east_top",
+          "conference": "East",
+          "source_slots": [
+            {
+              "stage": "first_round",
+              "slot": "east_3_6"
+            },
+            {
+              "stage": "first_round",
+              "slot": "east_2_7"
+            }
+          ],
+          "winner_team_id": 1610612752
+        },
+        {
+          "slot": "east_bottom",
+          "conference": "East",
+          "source_slots": [
+            {
+              "stage": "first_round",
+              "slot": "east_1_8"
+            },
+            {
+              "stage": "first_round",
+              "slot": "east_4_5"
+            }
+          ],
+          "winner_team_id": 1610612739
+        },
+        {
+          "slot": "west_top",
+          "conference": "West",
+          "source_slots": [
+            {
+              "stage": "first_round",
+              "slot": "west_1_8"
+            },
+            {
+              "stage": "first_round",
+              "slot": "west_4_5"
+            }
+          ],
+          "winner_team_id": 1610612760
+        },
+        {
+          "slot": "west_bottom",
+          "conference": "West",
+          "source_slots": [
+            {
+              "stage": "first_round",
+              "slot": "west_2_7"
+            },
+            {
+              "stage": "first_round",
+              "slot": "west_3_6"
+            }
+          ],
+          "winner_team_id": 1610612759
+        }
+      ]
+    },
+    "conference_finals": {
+      "label": "Conference Finals",
+      "matchups": [
+        {
+          "slot": "east",
+          "conference": "East",
+          "source_slots": [
+            {
+              "stage": "second_round",
+              "slot": "east_top"
+            },
+            {
+              "stage": "second_round",
+              "slot": "east_bottom"
+            }
+          ],
+          "winner_team_id": null
+        },
+        {
+          "slot": "west",
+          "conference": "West",
+          "source_slots": [
+            {
+              "stage": "second_round",
+              "slot": "west_top"
+            },
+            {
+              "stage": "second_round",
+              "slot": "west_bottom"
+            }
+          ],
+          "winner_team_id": null
+        }
+      ]
+    },
+    "finals": {
+      "label": "NBA Finals",
+      "matchups": [
+        {
+          "slot": "nba_finals",
+          "conference": "NBA",
+          "source_slots": [
+            {
+              "stage": "conference_finals",
+              "slot": "east"
+            },
+            {
+              "stage": "conference_finals",
+              "slot": "west"
+            }
+          ],
+          "winner_team_id": null
+        }
+      ]
+    }
+  }
+}

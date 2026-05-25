@@ -1,0 +1,2 @@
+stage,slot,conference,matchup,higher_seed,lower_seed,model_prob_higher_seed,prob_higher_seed,predicted_winner,confidence,actual_winner,adjustment_notes
+finals,nba_finals,NBA,Oklahoma City Thunder vs New York Knicks,Oklahoma City Thunder,New York Knicks,0.7080580592155457,0.6872522532939911,Oklahoma City Thunder,0.6872522532939911,,shrinkage=0.10
